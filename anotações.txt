@@ -1,0 +1,24 @@
+Paleta de cores:
+Azul escuro: RGB(34, 38, 83)
+
+Preto profundo: RGB(6, 6, 12)
+
+Azul acinzentado: RGB(95, 116, 154)
+
+Azul royal: RGB(32, 41, 124)
+
+Vermelho queimado (das flores): RGB(162, 70, 59)
+
+Roxo azulado muito escuro: RGB(22, 21, 46)
+
+Azul escuro → #222653
+
+Preto profundo → #06060C
+
+Azul acinzentado → #5F749A
+
+Azul royal → #20297C
+
+Vermelho queimado → #A2463B
+
+Roxo azulado muito escuro → #16152E
