@@ -19,6 +19,34 @@ CREATE TABLE Clientes (
     CPF CHAR(11)
 );
 
+CREATE TABLE Vendedores (
+  id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  nome VARCHAR(100) NOT NULL,
+  email VARCHAR(150) NOT NULL UNIQUE,
+  senha_hash VARCHAR(255) NOT NULL,
+  data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- insert vendedores
+
+INSERT INTO funcionario (nome, sobrenome, email, senha_hash)
+VALUES (
+  {{ Input_Nome.text }},
+  {{ Input_Sobrenome.text }},
+  {{ Input_Email.text }},
+  SHA2({{ Input_Senha.text }}, 256)
+);
+
+INSERT INTO Vendedores (nome,  email, senha_hash)
+VALUES (
+  'João',
+  'joao.silva@example.com',
+  SHA2('Senha123!', 256)
+);
+
+
+
+
 -- inserindo
 
 INSERT INTO Clientes (Nome, Endereco, CPF) VALUES
@@ -27,6 +55,9 @@ INSERT INTO Clientes (Nome, Endereco, CPF) VALUES
 ('Carlos Pereira', 'Travessa da Paz, 78', '34567890123'),
 ('Ana Souza', 'Rua Nova, 90', '45678901234'),
 ('Lucas Santos', 'Alameda das Acácias, 55', '56789012345');
+
+
+
 
 
 
@@ -52,3 +83,24 @@ CREATE TABLE itens_pedido (
     preco_unitario DECIMAL(10,2) NOT NULL,
     FOREIGN KEY (id_pedido) REFERENCES pedido(id_pedido)
 );
+
+CREATE TABLE fornecedores (
+    id_fornecedor INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    cnpj VARCHAR(18) UNIQUE NOT NULL,
+    telefone VARCHAR(15)
+);
+
+CREATE TABLE enderecos (
+    id_endereco INT AUTO_INCREMENT PRIMARY KEY,
+    id_fornecedor INT NOT NULL,
+    logradouro VARCHAR(150),
+    numero VARCHAR(10),
+    bairro VARCHAR(60),
+    cidade VARCHAR(60),
+    estado CHAR(2),
+    FOREIGN KEY (id_fornecedor) REFERENCES fornecedores(id_fornecedor)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+
