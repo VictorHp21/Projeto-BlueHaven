@@ -65,6 +65,7 @@ O banco de dados é hospedado na **Aiven**, garantindo estabilidade e alta dispo
 ## 💡 Sobre o Projeto
 
 BlueHaven nasceu com o objetivo de ser uma loja exemplo e de uso base para a criação do app.
+--App feito para entrega na matéria de low-code do 5º período do curso de Sistemas de Informação.
 
 ---
 
