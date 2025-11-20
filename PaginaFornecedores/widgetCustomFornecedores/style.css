@@ -1,0 +1,65 @@
+.fornecedores-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background-color: #06060C;
+  color: #FFFFFF;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 12px;
+}
+
+.fornecedores-container h2 {
+  margin: 0 0 8px 0;
+  font-size: 30px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.marca-logos {
+  display: flex;
+  justify-content: center;
+  gap: 42px;
+  margin-bottom: 16px;
+}
+
+.marca-logo {
+  height: 50px;         /* menor tamanho */
+  filter: brightness(0) invert(1); /* deixa branco */
+  object-fit: contain;
+}
+
+.fornecedor-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #16152E;
+  border-radius: 12px;
+  padding: 12px 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.5);
+}
+
+.fornecedor-card:nth-child(even) {
+  background-color: #20297C;
+}
+
+.fornecedor-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.7);
+}
+
+.fornecedor-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fornecedor-info span {
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.fornecedor-info span b {
+  color: #A2463B;
+}

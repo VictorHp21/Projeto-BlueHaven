@@ -7,19 +7,6 @@ const Button = ({ children, className, ...props }) => (
   </button>
 );
 
-.btn-white.onClick = () => {
-  appsmith.triggerEvent("onClick");
-  {{ 
-InsertFuncionario.run(() => {
-  showAlert('Usuário cadastrado com sucesso!', 'success');
-  navigateTo('TelaLogin');
-}, (error) => {
-  showAlert('Erro ao cadastrar: ' + error.message, 'error');
-})
-}}
-
-};
-
 function App() {
   const [currentIndex, setCurrentIndex] = React.useState(0);
 

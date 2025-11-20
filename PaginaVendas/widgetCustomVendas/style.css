@@ -1,0 +1,62 @@
+.vendas-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background-color: #06060C; 
+  color: #FFFFFF;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 12px;
+}
+
+.total-vendas {
+  font-size: 18px;
+  font-weight: bold;
+  color: #5F749A; 
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  background-color: black; 
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+.venda-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #16152E; 
+  border-radius: 12px;
+  padding: 12px 16px;
+  transition: all 0.3s ease;
+  gap: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.5);
+}
+
+.venda-card:nth-child(even) {
+  background-color: #20297C; 
+}
+
+.venda-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.7);
+}
+
+.venda-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.venda-info span {
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.venda-info span b {
+  color: #A2463B;
+}
+
+.icon {
+  margin-right: 6px;
+}
