@@ -78,3 +78,6 @@ Sinta-se à vontade para explorar, adaptar e melhorar o sistema.
 
 👤 **Autores: Victor Henrique, João Vittor Procoppio e Guilherme Nunes.
 📅 **Ano: 2025  
+
+
+** Obs: Falta uma correção na hospedagem do banco de dados do app para a permanência de clientes e fornecedores no mesmo (a fazer).
