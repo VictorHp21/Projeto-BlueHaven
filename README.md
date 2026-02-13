@@ -83,6 +83,9 @@ Sinta-se à vontade para explorar, adaptar e melhorar o sistema.
 ** Obs: Falta uma correção na hospedagem do banco de dados do app para a permanência de clientes e fornecedores no mesmo (a fazer).
 
 
+
+---
+
 🧭 Atualização do App — 13/02
 🛠️ Correções e Melhorias Gerais
 
