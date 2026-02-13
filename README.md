@@ -95,6 +95,8 @@ Adicionada a tabela Log_Auditoria para registrar todas as operações de INSERT,
 
 Correção de relacionamentos — agora não é mais possível excluir clientes que possuam pedidos vinculados, garantindo a integridade referencial.
 
+---
+
 ⚙️ Tratamento de Erros aprimorado:
 
 O botão de exclusão de clientes não exibe mais o erro técnico de foreign key constraint.
@@ -102,6 +104,9 @@ O botão de exclusão de clientes não exibe mais o erro técnico de foreign key
 Nova mensagem amigável ao usuário:
 
 "⚠️ Erro: O cliente não pode ser excluído pois existe um pedido ligado a ele."
+
+
+---
 
 🔐 Ajustes no Sistema de Login
 
@@ -113,9 +118,16 @@ Nova mensagem amigável ao usuário:
 
 "⚠️ Por favor, faça o login para continuar."
 
+
+---
+
 🎨 Melhorias Visuais
 
 💅 Pequena atualização na tela de clientes, com ajustes visuais e melhor usabilidade.
+
+---
+
+---
 
 📚 Anotação:
 
