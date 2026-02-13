@@ -19,3 +19,25 @@ export default {
 
 	}
 }
+
+
+// correção delete clientes:
+
+{{
+  Delete_ClienteEscolhido.run()
+    .then(() => {
+      Clientes_PorNome.run();   
+      resetWidget("Select1");   
+      closeModal("Modal2");     
+      showAlert("Cliente excluído com sucesso!", "success");
+    })
+    .catch((error) => {
+ 
+      if (error.message.includes("foreign key constraint fails")) {
+        showAlert("Erro: O cliente não pode ser excluído pois existe um pedido ligado a ele.", "error");
+      } else {
+ 
+        showAlert("Erro ao excluir cliente: " + error.message, "error");
+      }
+    });
+}}

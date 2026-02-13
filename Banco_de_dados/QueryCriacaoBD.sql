@@ -283,6 +283,53 @@ INSERT INTO itens_pedido (id_pedido, id_produto, quantidade) VALUES
 (11, 3, 10);
 
 
+-- Alterações/Melhorias dia 13/02
+
+
+-- tabela para auditoria de alterações feitas no bd pelos usuários
+
+CREATE TABLE Log_Auditoria (
+    id_log INT AUTO_INCREMENT PRIMARY KEY,
+    tabela VARCHAR(100) NOT NULL,
+    operacao ENUM('INSERT', 'UPDATE', 'DELETE') NOT NULL,
+    usuario VARCHAR(100),
+    data_operacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    dados_anteriores TEXT,
+    dados_novos TEXT
+);
+
+
+select *from Log_Auditoria;
+
+-- Removendo as FKs antigas 
+ALTER TABLE pedido DROP FOREIGN KEY pedido_ibfk_1;
+ALTER TABLE pedido DROP FOREIGN KEY fk_pedido_vendedor;
+
+-- Garantindo a não exclusão de clientes ou vendedores que estajam relacionados a algum pedido
+ALTER TABLE pedido
+ADD CONSTRAINT fk_pedido_cliente
+FOREIGN KEY (id_cliente) REFERENCES Clientes(idCliente)
+ON DELETE RESTRICT
+ON UPDATE CASCADE;
+
+ALTER TABLE pedido
+ADD CONSTRAINT fk_pedido_vendedor
+FOREIGN KEY (id_vendedor) REFERENCES Vendedores(id)
+ON DELETE RESTRICT
+ON UPDATE CASCADE;
+
+
+-- criando triggers para salvar na tab log_auditoria
+
+
+-- Guardar nome vendedor cadastrado no momento para log:
+SET @usuario_ativo = (
+    SELECT nome FROM Vendedores WHERE email = 'email_do_vendedor_logado'
+);
+
+
+
+
 
 
 

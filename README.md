@@ -81,3 +81,41 @@ Sinta-se à vontade para explorar, adaptar e melhorar o sistema.
 
 
 ** Obs: Falta uma correção na hospedagem do banco de dados do app para a permanência de clientes e fornecedores no mesmo (a fazer).
+
+
+🧭 Atualização do App — 13/02
+🛠️ Correções e Melhorias Gerais
+
+🔍 Banco de Dados aprimorado:
+
+Adicionada a tabela Log_Auditoria para registrar todas as operações de INSERT, UPDATE e DELETE realizadas pelos usuários cadastrados.
+
+Correção de relacionamentos — agora não é mais possível excluir clientes que possuam pedidos vinculados, garantindo a integridade referencial.
+
+⚙️ Tratamento de Erros aprimorado:
+
+O botão de exclusão de clientes não exibe mais o erro técnico de foreign key constraint.
+
+Nova mensagem amigável ao usuário:
+
+"⚠️ Erro: O cliente não pode ser excluído pois existe um pedido ligado a ele."
+
+🔐 Ajustes no Sistema de Login
+
+🧩 Correção completa na página de login.
+
+🔄 Verificação de login aplicada em todas as páginas do app, impedindo acesso não autorizado.
+
+🔔 Mensagem automática exibida quando o usuário tenta acessar sem estar logado:
+
+"⚠️ Por favor, faça o login para continuar."
+
+🎨 Melhorias Visuais
+
+💅 Pequena atualização na tela de clientes, com ajustes visuais e melhor usabilidade.
+
+📚 Anotação:
+
+Este aplicativo foi desenvolvido originalmente como avaliação da disciplina de Low Code do curso de Sistemas de Informação.
+
+Após o término da disciplina, todas as correções, melhorias e novas funcionalidades estão sendo realizadas por mim, com o objetivo de aprimorar a qualidade e complexidade do projeto.
